@@ -93,3 +93,14 @@ task quickBuildWithFixes {
     dependsOn ':Corona-Warn-App:ktlintDeviceReleaseSourceSetCheck'
     dependsOn ':Corona-Warn-App:detekt'
 }
+plugins {
+  id "org.sonarqube" version "3.4.0.2513"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "itFernstudi_cwa-app-android"
+    property "sonar.organization", "studisebald"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
